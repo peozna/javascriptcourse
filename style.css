@@ -1,0 +1,123 @@
+/*Importing the fonts I want*/
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Header container: logo and navigation menu */
+.header{
+    display: flex; /* use flexbox for horizontal layout */
+    align-items: center; /*vertically centers items*/
+    justify-content: space-between; /* pushes logo to left, meny to right */
+    padding: 20px;
+    background-color: #4B2668;
+}
+/* Logo styling */
+div.logo {
+    font-family: 'Italiana', serif;
+    color: #E1DDE3;
+    font-size: 50px;
+    padding-left: 40px;
+
+}
+/* Navigation menu styling */
+ul.navlinks{
+    list-style-type: none;  /* removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;  /* horizontal layout */
+    gap: 15px;  /* space between menu items */
+}
+/* Navigation links styling */
+ul.navlinks a {
+    font-family: 'Italiana', serif;   
+    color: #E1DDE3;                   
+    text-decoration: none;  /* removes underline */
+    font-size: 20px;  
+}
+/* Changes meny links color when hovered */
+ul.navlinks a:hover {
+    color: #1B042D;
+}
+/* Changes meny links color when on the active page */
+ul.navlinks a.active {
+    color: #1B042D;
+    text-decoration: underline;
+}
+/* Fixed background image behind content */
+.homeimg {
+    position: fixed;    /* stays in place when scrolling */
+    top: 10%;   /* distance from top of viewport */
+    left: 50%;  
+    width: 600px;
+    z-index: -1;    /* puts image behind all text content */
+    opacity: 0.4;
+}
+
+body {
+    background-color: #4B2668;
+}
+/*Portfolio page grid layout*/
+.portfolio-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    grid-template-rows: auto 1fr;   /*top auto height, bottom fills remaining*/
+    gap: 20px;  /* space between grid items */
+}
+/*Top box spans both columns*/
+.top-box {
+    grid-column: 1 / span 2; /* spans both columns */
+    background-color: rgba(109, 67, 141, 0.5);
+    text-align: center;
+    width: 70%;
+    margin: 0 auto; /* centers the box */
+}
+/*The lower left and right boxes*/
+.left-box, .right-box {
+    background-color: rgba(109, 67, 141, 0.5);
+    text-align: center;
+}
+/*Giving the h2s on the portfolio page a border around the text, to make it pop more*/
+.top-box h2,
+.left-box h2,
+.right-box h2 {
+    text-shadow: -2px 0 #7B539A, 0 2px #7B539A, 2px 0 #7B539A, 0 -2px #7B539A;
+}
+/*Skills list styling*/
+ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three equal columns */
+    columns: 3;
+    column-gap: 30px;
+    text-align: left;;
+}
+/*Skills list bullet point styling*/
+ul.skills-list li::marker {
+    color: white;
+    font-size: 1em; /* size of the bullet point */
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+    h1 {
+        font-family: 'Italiana', serif;
+        color: #E1DDE3;
+        font-size: 100px;
+        padding-left: 20px;
+    }
+    h2 {
+        font-family: 'Italiana', serif;
+        color: #E1DDE3;
+        font-size: 32;
+    }
+    h3 {
+        font-family: 'Italiana', serif;
+        color: #E1DDE3;
+        font-size: 24px;
+        padding: 20px;
+    }
+    p {
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 16px;
+    }
