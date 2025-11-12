@@ -1,6 +1,9 @@
 /*Importing the fonts I want*/
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500&display=swap');
 
+html {
+    scroll-behavior: smooth; /* smooth scrolling */
+}
 /* Header container: logo and navigation menu */
 .header{
     display: flex; /* use flexbox for horizontal layout */
@@ -68,11 +71,13 @@ body {
     text-align: center;
     width: 70%;
     margin: 0 auto; /* centers the box */
+    box-shadow:  #371c4c 0px 0px 7px;
 }
 /*The lower left and right boxes*/
 .left-box, .right-box {
     background-color: rgba(109, 67, 141, 0.5);
     text-align: center;
+    box-shadow:  #371c4c 0px 0px 7px;
 }
 /*Giving the h2s on the portfolio page a border around the text, to make it pop more*/
 .top-box h2,
@@ -88,10 +93,17 @@ ul.skills-list {
     column-gap: 30px;
     text-align: left;;
 }
-/*Skills list bullet point styling*/
-ul.skills-list li::marker {
+/*Lists bullet point styling*/
+ul.skills-list, ul.dogedu-list, ul.webedu-list li::marker {
     color: white;
     font-size: 1em; /* size of the bullet point */
+}
+/*Styling for education lists*/
+ul.dogedu-list, ul.webedu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two equal columns */
+    columns: 2;
+    column-gap: 20px;
 }
 footer {
     position: fixed;
@@ -108,7 +120,7 @@ footer {
     h2 {
         font-family: 'Italiana', serif;
         color: #E1DDE3;
-        font-size: 32;
+        font-size: 32px;
     }
     h3 {
         font-family: 'Italiana', serif;
