@@ -106,8 +106,6 @@ ul.dogedu-list, ul.webedu-list {
     column-gap: 20px;
 }
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     text-align: center;
 }
@@ -128,8 +126,13 @@ footer {
         font-size: 24px;
         padding: 20px;
     }
-    p {
+    .normal-text {
         font-family: 'Montserrat', sans-serif;
         color: white;
         font-size: 16px;
+    }
+    .small-text {
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 12px;
     }
