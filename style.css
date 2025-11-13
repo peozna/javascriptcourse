@@ -1,25 +1,58 @@
 /*Importing the fonts I want*/
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500&display=swap');
 
+/*CSS variable system. Defines all colour, font families and sizes for easy reuse and consistancy*/
+:root {
+    /*Colours*/
+    --primary-color: #4B2668; /* deep purple */
+    --secondary-color: #6D438D; /* lighter purple */
+    --accent-color: #1B042D; /* dark purple */
+    --heading-color: #E1DDE3; /* light grey */
+    --text-color: #FFFFFF; /* white */
+    --bs-color: #371c4c; /* box shadow color */
+    --ts-color: #7B539A; /* text shadow color */
+
+    /*Font Families*/
+    --font-heading: 'Italiana', serif;
+    --font-text: 'Montserrat', sans-serif;
+
+    /*Font sizes*/
+    --fs-h1: 100px;
+    --fs-h2: 32px;
+    --fs-h3: 24px;
+    --fs-logo: 50px;
+    --fs-nav: 20px;
+    --fs-normal: 16px;
+    --fs-small: 12px;
+
+    /*Spacing*/
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 40px;
+}
+
 html {
     scroll-behavior: smooth; /* smooth scrolling */
 }
+
 /* Header container: logo and navigation menu */
 .header{
     display: flex; /* use flexbox for horizontal layout */
     align-items: center; /*vertically centers items*/
     justify-content: space-between; /* pushes logo to left, meny to right */
-    padding: 20px;
-    background-color: #4B2668;
+    padding: var(--space-md);
+    background-color: var(--primary-color);
 }
+
 /* Logo styling */
 div.logo {
-    font-family: 'Italiana', serif;
-    color: #E1DDE3;
+    font-family: var(--font-heading);
+    color: var(--heading-color);
     font-size: 50px;
-    padding-left: 40px;
+    padding-left: var(--space-lg);
 
 }
+
 /* Navigation menu styling */
 ul.navlinks{
     list-style-type: none;  /* removes bullet points */
@@ -28,22 +61,26 @@ ul.navlinks{
     display: flex;  /* horizontal layout */
     gap: 15px;  /* space between menu items */
 }
+
 /* Navigation links styling */
 ul.navlinks a {
-    font-family: 'Italiana', serif;   
-    color: #E1DDE3;                   
+    font-family: var(--font-heading);   
+    color: var(--heading-color);                   
     text-decoration: none;  /* removes underline */
     font-size: 20px;  
 }
+
 /* Changes meny links color when hovered */
 ul.navlinks a:hover {
-    color: #1B042D;
+    color: var(--accent-color);
 }
+
 /* Changes meny links color when on the active page */
 ul.navlinks a.active {
-    color: #1B042D;
+    color: var(--accent-color);
     text-decoration: underline;
 }
+
 /* Fixed background image behind content */
 .homeimg {
     position: fixed;    /* stays in place when scrolling */
@@ -55,15 +92,17 @@ ul.navlinks a.active {
 }
 
 body {
-    background-color: #4B2668;
+    background-color: var(--primary-color);
 }
+
 /*Portfolio page grid layout*/
 .portfolio-container{
     display: grid;
     grid-template-columns: 1fr 1fr; /* two equal columns */
     grid-template-rows: auto 1fr;   /*top auto height, bottom fills remaining*/
-    gap: 20px;  /* space between grid items */
+    gap: var(--space-md);  /* space between grid items */
 }
+
 /*Top box spans both columns*/
 .top-box {
     grid-column: 1 / span 2; /* spans both columns */
@@ -71,20 +110,23 @@ body {
     text-align: center;
     width: 70%;
     margin: 0 auto; /* centers the box */
-    box-shadow:  #371c4c 0px 0px 7px;
+    box-shadow:  var(--bs-color) 0px 0px 7px;
 }
+
 /*The lower left and right boxes*/
 .left-box, .right-box {
     background-color: rgba(109, 67, 141, 0.5);
     text-align: center;
-    box-shadow:  #371c4c 0px 0px 7px;
+    box-shadow:  var(--bs-color) 0px 0px 7px;
 }
+
 /*Giving the h2s on the portfolio page a border around the text, to make it pop more*/
 .top-box h2,
 .left-box h2,
 .right-box h2 {
-    text-shadow: -2px 0 #7B539A, 0 2px #7B539A, 2px 0 #7B539A, 0 -2px #7B539A;
+    text-shadow: -2px 0 var(--ts-color), 0 2px var(--ts-color), 2px 0 var(--ts-color), 0 -2px var(--ts-color);
 }
+
 /*Skills list styling*/
 ul.skills-list {
     display: grid;
@@ -93,11 +135,13 @@ ul.skills-list {
     column-gap: 30px;
     text-align: left;;
 }
+
 /*Lists bullet point styling*/
 ul.skills-list, ul.dogedu-list, ul.webedu-list li::marker {
-    color: white;
+    color: var(--text-color);
     font-size: 1em; /* size of the bullet point */
 }
+
 /*Styling for education lists*/
 ul.dogedu-list, ul.webedu-list {
     display: grid;
@@ -105,34 +149,72 @@ ul.dogedu-list, ul.webedu-list {
     columns: 2;
     column-gap: 20px;
 }
+
+/* Portfolio image styling */
+.port-img {
+    float: left; /* aligns image to the left */
+    width: 25%; /* image width relative to container */
+    height: auto; /* maintain aspect ratio */
+    padding: 10px; /* space around image */
+}
+
+/* Gallery grid layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* responsive columns */
+}
+
+/* Gallery images styling */
+.gallery-grid img {
+    width: 100%; /* full width of grid cell */
+    height: 200px; /* fixed height */
+    object-fit: cover; /* maintain aspect ratio, crop if necessary */
+    box-shadow:  var(--bs-color) 0px 0px 7px;
+    transition: 0.3s ease; /* smooth transition for hover effect */
+}
+/* Gallery image hover effect */
+.gallery-grid img:hover {
+    transform: scale(1.5); /* enlarge image */
+    box-shadow:  var(--bs-color) 0px 0px 15px; /* stronger shadow */
+    z-index: 1; /* bring to front */ 
+}
+
+/* Caption styling for gallery images */
+figcaption {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--fs-small);
+    margin-top: var(--space-sm);
+}
+
 footer {
     width: 100%;
     text-align: center;
 }
     h1 {
-        font-family: 'Italiana', serif;
-        color: #E1DDE3;
-        font-size: 100px;
-        padding-left: 20px;
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-size: var(--fs-h1);
+        padding-left: var(--space-md);
     }
-    h2 {
-        font-family: 'Italiana', serif;
-        color: #E1DDE3;
-        font-size: 32px;
+    h2, .gallery h2 {
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-size: var(--fs-h2);
     }
     h3 {
-        font-family: 'Italiana', serif;
-        color: #E1DDE3;
-        font-size: 24px;
-        padding: 20px;
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-size: var(--fs-h3);
+        padding: var(--space-md);
     }
     .normal-text {
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        font-size: 16px;
+        font-family: var(--font-text);
+        color: var(--text-color);
+        font-size: var(--fs-normal);
     }
     .small-text {
-        font-family: 'Montserrat', sans-serif;
-        color: white;
-        font-size: 12px;
+        font-family: var(--font-text);
+        color: var(--text-color);
+        font-size: var(--fs-small);
     }
