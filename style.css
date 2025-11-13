@@ -120,13 +120,6 @@ body {
     box-shadow:  var(--bs-color) 0px 0px 7px;
 }
 
-/*Giving the h2s on the portfolio page a border around the text, to make it pop more*/
-.top-box h2,
-.left-box h2,
-.right-box h2 {
-    text-shadow: -2px 0 var(--ts-color), 0 2px var(--ts-color), 2px 0 var(--ts-color), 0 -2px var(--ts-color);
-}
-
 /*Skills list styling*/
 ul.skills-list {
     display: grid;
@@ -149,6 +142,14 @@ ul.dogedu-list, ul.webedu-list {
     columns: 2;
     column-gap: 20px;
 }
+
+ul.employed-list, ul.projects-list {
+    list-style-type: none; /* removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+
 
 /* Portfolio image styling */
 .port-img {
@@ -187,34 +188,38 @@ figcaption {
     margin-top: var(--space-sm);
 }
 
+/*Footer styling*/
 footer {
     width: 100%;
     text-align: center;
 }
-    h1 {
+
+/*Heading and text styling*/
+h1 {
         font-family: var(--font-heading);
         color: var(--heading-color);
         font-size: var(--fs-h1);
         padding-left: var(--space-md);
-    }
-    h2, .gallery h2 {
+}
+h2, .gallery h2 {
         font-family: var(--font-heading);
         color: var(--heading-color);
         font-size: var(--fs-h2);
-    }
-    h3 {
+        text-shadow: -2px 0 var(--ts-color), 0 2px var(--ts-color), 2px 0 var(--ts-color), 0 -2px var(--ts-color);
+}
+h3 {
         font-family: var(--font-heading);
         color: var(--heading-color);
         font-size: var(--fs-h3);
         padding: var(--space-md);
-    }
-    .normal-text {
+}
+.normal-text {
         font-family: var(--font-text);
         color: var(--text-color);
         font-size: var(--fs-normal);
-    }
-    .small-text {
+ }
+.small-text {
         font-family: var(--font-text);
         color: var(--text-color);
         font-size: var(--fs-small);
-    }
+}
