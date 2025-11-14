@@ -145,11 +145,11 @@ ul.navlinks a.active {
 
 /*The lower left and right boxes*/
 .left-box, .right-box {
+    align-items: start;
     background-color: rgba(109, 67, 141, 0.5);
     text-align: center;
     box-shadow:  var(--bs-color) 0px 0px 7px;
 }
-
 /*Skills list styling*/
 ul.skills-list {
     display: grid;
@@ -190,7 +190,9 @@ ul.employed-list, ul.projects-list {
 /* Gallery grid layout */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* responsive columns */
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
 }
 
 /* Gallery images styling */
