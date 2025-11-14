@@ -31,8 +31,42 @@
     --space-lg: 40px;
 }
 
+/*Heading and text styling*/
+h1 {
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-size: var(--fs-h1);
+        padding-left: var(--space-md);
+}
+h2, .gallery h2 {
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-size: var(--fs-h2);
+        text-shadow: -2px 0 var(--ts-color), 0 2px var(--ts-color), 2px 0 var(--ts-color), 0 -2px var(--ts-color);
+}
+h3 {
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-size: var(--fs-h3);
+        padding: var(--space-md);
+}
+.normal-text {
+        font-family: var(--font-text);
+        color: var(--text-color);
+        font-size: var(--fs-normal);
+ }
+.small-text {
+        font-family: var(--font-text);
+        color: var(--text-color);
+        font-size: var(--fs-small);
+}
+
 html {
     scroll-behavior: smooth; /* smooth scrolling */
+}
+
+body {
+    background-color: var(--primary-color);
 }
 
 /* Header container: logo and navigation menu */
@@ -91,10 +125,6 @@ ul.navlinks a.active {
     opacity: 0.4;
 }
 
-body {
-    background-color: var(--primary-color);
-}
-
 /*Portfolio page grid layout*/
 .portfolio-container{
     display: grid;
@@ -149,8 +179,6 @@ ul.employed-list, ul.projects-list {
     margin: 0;
 }
 
-
-
 /* Portfolio image styling */
 .port-img {
     float: left; /* aligns image to the left */
@@ -188,38 +216,76 @@ figcaption {
     margin-top: var(--space-sm);
 }
 
+/*Contact container styling*/
+.contact-container {
+    display: flex; /* use flexbox for layout */
+    flex-direction: column; /* stack items vertically */
+    width: 50%;
+    margin: 0 auto; /* centers the container */
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background-color: rgba(109, 67, 141, 0.5);
+    box-shadow:  var(--bs-color) 0px 0px 7px;
+}
+
+/*Contact form styling*/
+form {
+    display: flex; /* use flexbox for layout */
+    flex-direction: column; /* stack items vertically */
+    width: 100%;
+    gap: var(--space-md);
+}
+
+/*Styling for short and long form fields*/
+.form-short, .form-long {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center; /* center label+input as a group */
+    gap: var(--space-sm);
+    width: 100%;
+}
+/*Short and long input field widths*/
+.form-short input {
+    width: 30%; /* short input fields width */
+
+}
+.form-long input, textarea {
+    width: 70%; /* long input fields width */
+        
+}
+
+/*Form label styling*/
+label {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--fs-normal);
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end; /* align button to the right */
+}
+
+/*Submit button styling*/
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--fs-small);
+    width: 15%;
+    border: white 2px solid; /* white border */
+    border-radius: 50px; /* rounded corners */
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    cursor: pointer; /* pointer cursor on hover */
+}
+
 /*Footer styling*/
 footer {
     width: 100%;
     text-align: center;
 }
 
-/*Heading and text styling*/
-h1 {
-        font-family: var(--font-heading);
-        color: var(--heading-color);
-        font-size: var(--fs-h1);
-        padding-left: var(--space-md);
-}
-h2, .gallery h2 {
-        font-family: var(--font-heading);
-        color: var(--heading-color);
-        font-size: var(--fs-h2);
-        text-shadow: -2px 0 var(--ts-color), 0 2px var(--ts-color), 2px 0 var(--ts-color), 0 -2px var(--ts-color);
-}
-h3 {
-        font-family: var(--font-heading);
-        color: var(--heading-color);
-        font-size: var(--fs-h3);
-        padding: var(--space-md);
-}
-.normal-text {
-        font-family: var(--font-text);
-        color: var(--text-color);
-        font-size: var(--fs-normal);
- }
-.small-text {
-        font-family: var(--font-text);
-        color: var(--text-color);
-        font-size: var(--fs-small);
-}
