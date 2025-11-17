@@ -120,7 +120,7 @@ ul.navlinks a.active {
     position: fixed;    /* stays in place when scrolling */
     top: 10%;   /* distance from top of viewport */
     left: 50%;
-    width: 600px;
+    width: 45%;
     z-index: -1;    /* puts image behind all text content */
     opacity: 0.4;
 }
@@ -314,10 +314,6 @@ footer {
         transform: translateX(-50%);
         top: 5%;
         width: 90%;          /* scale to fit smaller screens */
-    }
-    .normal-text {
-        font-size: 14px;
-        padding: 0 var(--space-sm);
     }
     /* Top box full width */
     .top-box {
