@@ -293,12 +293,31 @@ footer {
 
 /*Mobile responsiveness*/
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
+    ul.navlinks {
+        flex-direction: column;
+        gap: 5px;
+    }
+    h1 {
+        font-size: 36px; /* smaller for mobile */
+        padding-left: var(--space-sm);
+        padding-right: var(--space-sm);
+        text-align: center;
+    }
     .homeimg {
         left: 50%;           /* center on mobile */
         transform: translateX(-50%);
         top: 5%;
         width: 90%;          /* scale to fit smaller screens */
+    }
+    .normal-text {
+        font-size: 14px;
+        padding: 0 var(--space-sm);
     }
     /* Top box full width */
     .top-box {
