@@ -155,7 +155,7 @@ ul.skills-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* three equal columns */
     columns: 3;
-    column-gap: 30px;
+    column-gap: 10%;
     text-align: left;;
 }
 
@@ -170,7 +170,7 @@ ul.dogedu-list, ul.webedu-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* two equal columns */
     columns: 2;
-    column-gap: 20px;
+    column-gap: 10%;
 }
 
 ul.employed-list, ul.projects-list {
@@ -198,7 +198,7 @@ ul.employed-list, ul.projects-list {
 /* Gallery images styling */
 .gallery-grid img {
     width: 100%; /* full width of grid cell */
-    height: 200px; /* fixed height */
+    aspect-ratio: 3 / 2; /* maintain 3:2 aspect ratio */
     object-fit: cover; /* maintain aspect ratio, crop if necessary */
     box-shadow:  var(--bs-color) 0px 0px 7px;
     transition: 0.3s ease; /* smooth transition for hover effect */
@@ -291,77 +291,32 @@ footer {
     text-align: center;
 }
 
-/*Mobile responsiveness*/
-@media (max-width: 768px) {
+@mobile only and (max-width: 600px) {
+    /*Responsive adjustments for small screens*/
     .header {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: column; /* stack logo and menu vertically */
+        align-items: flex-start; /* align items to the left */
     }
-
     ul.navlinks {
-        flex-direction: column;
-        gap: 5px;
-    }
-    h1 {
-        font-size: 36px; /* smaller for mobile */
-        padding-left: var(--space-sm);
-        padding-right: var(--space-sm);
-        text-align: center;
+        flex-direction: column; /* stack menu items vertically */
+        gap: var(--space-sm); /* reduce gap between items */
     }
     .homeimg {
-        left: 50%;           /* center on mobile */
-        transform: translateX(-50%);
-        top: 5%;
-        width: 90%;          /* scale to fit smaller screens */
+        width: 80%; /* increase image width for small screens */
+        top: 5%; /* adjust top position */
     }
-    /* Top box full width */
-    .top-box {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    /* Skills list stacks vertically on mobile */
-    ul.skills-list {
-        display: grid;
-        grid-template-columns: 1fr; /* single column */
-        gap: 10px;
-        text-align: left;
-    }
-
-    /* Education lists stack vertically */
-    ul.dogedu-list, ul.webedu-list {
-        grid-template-columns: 1fr; /* single column */
-    }
-
-    /* Left and right boxes full width */
-    .left-box, .right-box {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 20px;
-    }
-
-    /* Portfolio images scale properly */
-    .port-img {
-        width: 100%; /* full width on mobile */
-        float: none;
-        margin: 10px 0;
-    }
-
-    /* Buttons scale nicely */
-    button {
-        width: 50%; /* bigger tap area */
-    }
-
-    /* Form inputs stack nicely */
-    .form-short input, .form-long input, textarea {
-        width: 100%;
-    }
-
-    /* General container adjustments */
     .portfolio-container {
         grid-template-columns: 1fr; /* single column layout */
-        gap: 20px;
+        grid-template-rows: auto; /* auto height rows */
     }
-
+    .top-box, .left-box, .right-box {
+        width: 90%; /* increase box widths */
+        margin: 0 auto; /* center boxes */
+    }
+    .contact-container {
+        width: 80%; /* increase contact container width */
+    }
+    button {
+        width: 30%; /* increase button width */
+    }
 }
