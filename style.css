@@ -207,7 +207,7 @@ ul.employed-list, ul.projects-list {
 .gallery-grid img:hover {
     transform: scale(1.5); /* enlarge image */
     box-shadow:  var(--bs-color) 0px 0px 15px; /* stronger shadow */
-    z-index: 1; /* bring to front */ 
+    z-index: 1; /* bring to front */
 }
 
 /* Caption styling for gallery images */
