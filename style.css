@@ -290,6 +290,10 @@ footer {
     width: 100%;
     text-align: center;
 }
+.foot-img {
+    width: 2%;
+    height: auto;
+}
 
 @mobile only and (max-width: 600px) {
     /*Responsive adjustments for small screens*/
