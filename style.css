@@ -274,7 +274,6 @@ label {
     display: flex;
     justify-content: flex-end; /* align button to the right */
 }
-
 /*Submit button styling*/
 button {
     background-color: var(--primary-color);
@@ -283,6 +282,11 @@ button {
     width: 15%;
     border: white 2px solid; /* white border */
     border-radius: 50px; /* rounded corners */
+}
+
+.button-clear {
+    display: flex;
+    justify-content: flex-end; /* align button to the left */
 }
 
 button:hover {
@@ -398,15 +402,12 @@ button { width: 30%; }
       /* Gallery: 1 column */
     .gallery-grid { 
         grid-template-columns: 1fr; 
-        gap: 15px; }
+        gap: 10px; }
 
     .gallery-grid img { 
         aspect-ratio: auto; 
     }
 
-    .gallery-grid img:hover { 
-        transform: scale(1.05); 
-    }
     .contact-container {
         width: 80%; /* increase contact container width */
     }

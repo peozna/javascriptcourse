@@ -15,34 +15,40 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li> <!-- The active page -->
             </ul>
         </nav>
     </header>
+
+        <!-- Contact form container -->
     <div class="contact-container">
         <h2>Contact</h2>
-        <form>
-            <div class ="form-short">
+        <form> <!-- Contact form without backend submission (static) -->
+            <div class ="form-short"> <!-- Short input field for user's name -->
                 <label>Name:</label>
-                <input type="text" required>
+                <input type="text" required> <!-- Required field -->
             </div>
-             <div class ="form-short">
+             <div class ="form-short"> <!-- Short input field for email -->
                 <label>Email:</label>
                 <input type="text" required>
             </div>
-             <div class ="form-long">
+             <div class ="form-long"> <!-- Long input field for subject line -->
                 <label>Subject:</label>
                 <input type="text" required>
             </div>
-             <div class ="form-long">
+             <div class ="form-long"> <!-- Textarea for longer message -->
                 <label>Message:</label>
                 <textarea required></textarea>
             </div>
             <div class="button-row">
                 <button type="submit">Submit</button>
             </div>
+            <div class="button-clear">
+                <button type="reset">Reset</button>
+            </div>
         </form>
     </div>
+
     <footer>
     <p class="small-text">
         Kristianstad University | Javascript for web development - DA558A | Nathalie Törnkvist | © 2025
