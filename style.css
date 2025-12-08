@@ -11,6 +11,8 @@
     --text-color: #FFFFFF; /* white */
     --bs-color: #371c4c; /* box shadow color */
     --ts-color: #7B539A; /* text shadow color */
+    --pop-color: #D7BA89; /* highlight color */
+    --st-color: #9e7bb8;
 
     /*Font Families*/
     --font-heading: 'Italiana', serif;
@@ -40,13 +42,12 @@ h1 {
 }
 h2, .gallery h2 {
         font-family: var(--font-heading);
-        color: var(--heading-color);
+        color: var(--pop-color);
         font-size: var(--fs-h2);
-        text-shadow: -2px 0 var(--ts-color), 0 2px var(--ts-color), 2px 0 var(--ts-color), 0 -2px var(--ts-color);
 }
 h3 {
         font-family: var(--font-heading);
-        color: var(--heading-color);
+        color: var(--pop-color);
         font-size: var(--fs-h3);
         padding: var(--space-md);
 }
@@ -55,6 +56,12 @@ h3 {
         color: var(--text-color);
         font-size: var(--fs-normal);
  }
+.st-text {
+        font-family: var(--font-text);
+        color: #9e7bb8;
+        font-size: var(--fs-normal);
+        font-weight: bold;
+}
 .small-text {
         font-family: var(--font-text);
         color: var(--text-color);
@@ -166,7 +173,7 @@ ul.skills-list {
 
 /*Lists bullet point styling*/
 ul.skills-list, ul.dogedu-list, ul.webedu-list li::marker {
-    color: var(--text-color);
+    color: var(--st-color);
     font-size: 1em; /* size of the bullet point */
 }
 
