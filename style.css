@@ -120,7 +120,9 @@ ul.navlinks a.active {
     position: fixed;    /* stays in place when scrolling */
     top: 10%;   /* distance from top of viewport */
     left: 50%;
-    width: 45%;
+    transform: translateX(-50%);
+    width: 40%;
+    max-width: 600px;
     z-index: -1;    /* puts image behind all text content */
     opacity: 0.4;
 }
@@ -156,7 +158,10 @@ ul.skills-list {
     grid-template-columns: repeat(3, 1fr); /* three equal columns */
     columns: 3;
     column-gap: 10%;
-    text-align: left;;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /*Lists bullet point styling*/
@@ -295,11 +300,51 @@ footer {
     height: auto;
 }
 
-@mobile only and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
+:root {
+--fs-h1: 70px;
+--fs-h2: 28px;
+--fs-logo: 40px;
+}
+.homeimg { width: 55%; }
+}
+
+@media only screen and (max-width: 900px) {
+.header { 
+    flex-direction: column; 
+    text-align: center; }
+
+.logo { 
+    padding-left: 0; 
+}
+.navlinks { 
+    gap: 10px; 
+}
+
+.gallery-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 15px;
+}
+
+.gallery-grid img:hover { 
+    transform: scale(1.15); 
+}
+
+.portfolio-container { 
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto;
+}
+
+.contact-container { width: 70%; }
+button { width: 30%; }
+}
+
+@media only screen and (max-width: 600px) {
     /*Responsive adjustments for small screens*/
     .header {
         flex-direction: column; /* stack logo and menu vertically */
-        align-items: flex-start; /* align items to the left */
+        text-align: center; /* center align text */
+        
     }
     ul.navlinks {
         flex-direction: column; /* stack menu items vertically */
@@ -307,15 +352,60 @@ footer {
     }
     .homeimg {
         width: 80%; /* increase image width for small screens */
-        top: 5%; /* adjust top position */
+        top: 50%; /* adjust top position */
     }
-    .portfolio-container {
-        grid-template-columns: 1fr; /* single column layout */
-        grid-template-rows: auto; /* auto height rows */
+
+    .portfolio-container { /*single column layout*/
+        width: 100% !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .top-box ul.skills-list {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .top-box {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+   .top-box p {
+        font-size: 0.9rem; /* shrink text slightly */
+    }
+
+    .portfolio-container img {
+        width: 90%;
+        height: auto;
+        max-width: 420px;
+        border-radius: 12px;
+    }
+
+    .portfolio-container p,
+    .portfolio-container h3 {
+        width: 100%;
+        padding: 0 0.5rem;
+        margin: 0.5rem 0 0 0;
     }
     .top-box, .left-box, .right-box {
         width: 90%; /* increase box widths */
         margin: 0 auto; /* center boxes */
+    }
+      /* Gallery: 1 column */
+    .gallery-grid { 
+        grid-template-columns: 1fr; 
+        gap: 15px; }
+
+    .gallery-grid img { 
+        aspect-ratio: auto; 
+    }
+
+    .gallery-grid img:hover { 
+        transform: scale(1.05); 
     }
     .contact-container {
         width: 80%; /* increase contact container width */
