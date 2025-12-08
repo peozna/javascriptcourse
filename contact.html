@@ -34,7 +34,12 @@
             </div>
              <div class ="form-long"> <!-- Long input field for subject line -->
                 <label>Subject:</label>
-                <input type="text" required>
+                <select required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="collaboration">Collaboration</option>
+                </select>
             </div>
              <div class ="form-long"> <!-- Textarea for longer message -->
                 <label>Message:</label>
