@@ -6,6 +6,7 @@
     <meta name= "description" content="Lab1 in course DA558A">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="contact.js"></script>
 </head>
 <body>
     <header class="header">
@@ -23,18 +24,18 @@
         <!-- Contact form container -->
     <div class="contact-container">
         <h2>Contact</h2>
-        <form> <!-- Contact form without backend submission (static) -->
+        <form id="contactForm"> <!-- Contact form without backend submission (static) -->
             <div class ="form-short"> <!-- Short input field for user's name -->
                 <label>Name:</label>
-                <input type="text" required> <!-- Required field -->
+                <input type="text" id="name" required> <!-- Required field -->
             </div>
              <div class ="form-short"> <!-- Short input field for email -->
                 <label>Email:</label>
-                <input type="text" required>
+                <input type="text" id="email" required>
             </div>
-             <div class ="form-long"> <!-- Long input field for subject line -->
+             <div class ="form-long"> <!-- Dropdown selection for subject -->
                 <label>Subject:</label>
-                <select required>
+                <select id="subject"required>
                     <option value="" disabled selected>Select a subject</option>
                     <option value="inquiry">General Inquiry</option>
                     <option value="feedback">Feedback</option>
@@ -43,7 +44,7 @@
             </div>
              <div class ="form-long"> <!-- Textarea for longer message -->
                 <label>Message:</label>
-                <textarea required></textarea>
+                <textarea id="message" required></textarea>
             </div>
             <div class="button-row">
                 <button type="submit">Submit</button>
