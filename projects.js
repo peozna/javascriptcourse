@@ -1,4 +1,58 @@
 const projects = [ 
+    {
+        id: 1,
+        title: "Portfolio Website",
+        description: "A personal portfolio website built with HTML, CSS, and JavaScript.",
+        category: "Web Development",
+        technologies: ["HTML", "CSS", "JavaScript"],
+        image: "image/project1.png",
+        link: "https://example.com"
+    },
+    {
+        id: 2,
+        title: "Dog Ready App",
+        description: "Built a mobile application for new dog owners using Flutter framework",
+        category: "Web Development",
+        technologies: ["Flutter", "Dart"],
+        image: "image/project2.png",
+        link: "https://example.com"
+    },
+    {
+        id: 3,
+        title: "Python Project Lunas Ball",
+        description: "Built a simple round-robin dance pairing program using Python.",
+        category: "Web Development",
+        technologies: ["Python", "PyCharm"],
+        image: "image/project3.png",
+        link: "https://example.com"
+    },
+     {
+        id: 4,
+        title: "Project dog Milla",
+        description: "Created a training program for Milla the scraed dog",
+        category: "Dog Training",
+        technologies: ["Google Docs",],
+        image: "image/project4.png",
+        link: "https://example.com"
+    },
+     {
+        id: 5,
+        title: "Coffee Shop App prototype",
+        description: "Created as part of a team a interactive prototype for a coffee shop app using Figma.",
+        category: "Web Design",
+        technologies: ["Figma"],
+        image: "image/project5.png",
+        link: "https://example.com"
+    },
+     {
+        id: 6,
+        title: "Common Ground Game",
+        description: "Created as part of a team wireframes for a game called Common Ground for a dating app.",
+        category: "Web Design",
+        technologies: ["Figma"],
+        image: "image/project6.png",
+        link: "https://example.com"
+    }
 
 
 ];
