@@ -288,12 +288,11 @@ label {
     font-size: var(--fs-normal);
 }
 
-.button-row {
+.button-row, .button-clear {
     display: flex;
     justify-content: flex-end; /* align button to the right */
 }
-/*Submit button styling*/
-button {
+.button-row button {
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: var(--fs-small);
@@ -301,14 +300,21 @@ button {
     border: white 2px solid; /* white border */
     border-radius: 50px; /* rounded corners */
 }
-
-.button-clear {
-    display: flex;
-    justify-content: flex-end; /* align button to the left */
+.button-clear button{
+    background-color: var(--heading-color);
+    color: var(--accent-color);
+    font-family: var(--fs-small);
+    width: 15%;
+    border: var(--accent-color) 2px solid; /* purple border */
+    border-radius: 50px; /* rounded corners */
 }
-
-button:hover {
+.button-row button:hover {
     background-color: var(--accent-color);
+    cursor: pointer; /* pointer cursor on hover */
+}
+.button-clear button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer; /* pointer cursor on hover */
 }
 .error {
@@ -318,10 +324,15 @@ button:hover {
     text-align: right;
     transition: opacity 0.3s ease; 
 }
-
+.messageCounter {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--fs-small);
+    text-align: right;
+}
 .successMessage {
-    color: green;
-    font-size: var(--fs-normal);
+    color: var(--st-color);
+    font-size: var(--fs-h3);
     margin-top: 5px;
     text-align: center;
 }
