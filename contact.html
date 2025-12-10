@@ -6,7 +6,6 @@
     <meta name= "description" content="Lab1 in course DA558A">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="contact.js"></script>
 </head>
 <body>
     <header class="header">
@@ -24,15 +23,17 @@
         <!-- Contact form container -->
     <div class="contact-container">
         <h2>Contact</h2>
-        <form id="contactForm"> <!-- Contact form without backend submission (static) -->
+        <form id="contactForm" novalidate> <!-- Contact form without backend submission (static) -->
             <div class ="form-short"> <!-- Short input field for user's name -->
                 <label>Name:</label>
                 <input type="text" id="name" required> <!-- Required field -->
             </div>
+            <div class="error" id="nameError"></div> <!-- Container for error messages -->
              <div class ="form-short"> <!-- Short input field for email -->
                 <label>Email:</label>
                 <input type="text" id="email" required>
             </div>
+            <div class="error" id="emailError"></div>
              <div class ="form-long"> <!-- Dropdown selection for subject -->
                 <label>Subject:</label>
                 <select id="subject"required>
@@ -42,16 +43,20 @@
                     <option value="collaboration">Collaboration</option>
                 </select>
             </div>
+            <div class="error" id="subjectError"></div>
              <div class ="form-long"> <!-- Textarea for longer message -->
                 <label>Message:</label>
                 <textarea id="message" required></textarea>
             </div>
+            <div id="messageCounter">0 / 20 characters</div>
+            <div class="error" id="messageError"></div> <!-- Container for error messages -->
             <div class="button-row">
                 <button type="submit">Submit</button>
             </div>
             <div class="button-clear">
                 <button type="reset">Reset</button>
             </div>
+            <div id="successMessage" class="successMessage" style="display: none;"></div> <!-- Container for success message -->
         </form>
     </div>
 
@@ -66,5 +71,6 @@
             <img src="facebook.png" alt="Facebook icon" class="foot-img">
         </a>
     </footer>
+    <script src="contact.js"></script>
     </body>
     </html>

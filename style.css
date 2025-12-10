@@ -11,8 +11,7 @@
     --text-color: #FFFFFF; /* white */
     --bs-color: #371c4c; /* box shadow color */
     --ts-color: #7B539A; /* text shadow color */
-    --pop-color: #D7BA89; /* highlight color */
-    --st-color: #9e7bb8;
+    --st-color: #D7BA89; /* highlight color */
 
     /*Font Families*/
     --font-heading: 'Italiana', serif;
@@ -42,12 +41,12 @@ h1 {
 }
 h2, .gallery h2 {
         font-family: var(--font-heading);
-        color: var(--pop-color);
+        color: var(--heading-color);
         font-size: var(--fs-h2);
 }
 h3 {
         font-family: var(--font-heading);
-        color: var(--pop-color);
+        color: var(--heading-color);
         font-size: var(--fs-h3);
         padding: var(--space-md);
 }
@@ -58,7 +57,7 @@ h3 {
  }
 .st-text {
         font-family: var(--font-text);
-        color: #9e7bb8;
+        color: var(--st-color);
         font-size: var(--fs-normal);
         font-weight: bold;
 }
@@ -299,6 +298,20 @@ button {
 button:hover {
     background-color: var(--accent-color);
     cursor: pointer; /* pointer cursor on hover */
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 1px;
+    text-align: right;
+    transition: opacity 0.3s ease; 
+}
+
+.successMessage {
+    color: green;
+    font-size: 1em;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /*Footer styling*/
