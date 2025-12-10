@@ -262,11 +262,23 @@ form {
 /*Short and long input field widths*/
 .form-short input {
     width: 30%; /* short input fields width */
+    border: 3px solid #ccc;
+    border-radius: 4px;
 
 }
 .form-long input, textarea {
-    width: 70%; /* long input fields width */
-        
+    width: 70%; /* long input fields width */ 
+    border: 3px solid #ccc;
+    border-radius: 4px;    
+}
+input:focus, textarea:focus, select:focus { /* blue border on focus */
+     border-color: #007bff
+} 
+.input-error { /* red border on error */
+    border-color: red !important;
+}
+.input-valid { /* green border on valid input */
+    border-color: green !important;
 }
 
 /*Form label styling*/
@@ -309,8 +321,8 @@ button:hover {
 
 .successMessage {
     color: green;
-    font-size: 1em;
-    margin-top: 10px;
+    font-size: var(--fs-normal);
+    margin-top: 5px;
     text-align: center;
 }
 

@@ -8,11 +8,17 @@ const messageInput = document.getElementById('message');
 function showError(inputElement, message) { // Function to show error messages
     const errorElement = document.getElementById(inputElement.id + 'Error'); // Get corresponding error element
     errorElement.textContent = message; // Set error message
+
+    inputElement.classList.add('input-error'); // Add error styling to input
+    inputElement.classList.remove('input-valid'); // Remove valid styling if present
 }
 
 function clearError(inputElement) { // Function to clear error messages
     const errorElement = document.getElementById(inputElement.id + 'Error'); // Get corresponding error element
     errorElement.textContent = ''; // Clear error message
+
+    inputElement.classList.remove('input-error'); // Remove error styling
+    inputElement.classList.add('input-valid'); // Add valid styling
 }
 
 function clearForm() { // Function to clear the form
@@ -23,6 +29,10 @@ function clearForm() { // Function to clear the form
     subject.value = '';
     messageInput.value = '';
     
+    [nameInput, emailInput, subject, messageInput].forEach(input => {
+        input.classList.remove('input-valid', 'input-error'); // Remove valid styling from all inputss
+    });
+
     //Clear error messages
     clearError(nameInput);  
     clearError(emailInput); 
@@ -116,6 +126,11 @@ messageInput.addEventListener('input', function() { // Message input event liste
         messageCounter.style.color = 'green'; // Set counter color to green
     }
 });
+
+nameInput.addEventListener('blur', validateName);
+emailInput.addEventListener('blur', validateEmail);
+subject.addEventListener('change', validateSubject);
+messageInput.addEventListener('blur', validateMessage);
 
 contactForm.addEventListener('submit', function(event) { // Form submission event listener
     const isNameValid = validateName();
