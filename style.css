@@ -84,6 +84,8 @@ body {
     background-color: var(--primary-color);
 }
 
+/*STYLING FOR NAVIGATION MENU AND INDEX PAGE*/
+
 /* Logo styling */
 div.logo {
     font-family: var(--font-heading);
@@ -132,6 +134,8 @@ ul.navlinks a.active {
     z-index: -1;    /* puts image behind all text content */
     opacity: 0.4;
 }
+
+/* STYLING FOR PORTFOLIO PAGE */
 
 /*Portfolio page grid layout*/
 .portfolio-container{
@@ -198,6 +202,8 @@ ul.employed-list, ul.projects-list {
     padding: 10px; /* space around image */
 }
 
+/* STYLING FOR GALLERY PAGE */
+
 /* Gallery grid layout */
 .gallery-grid {
     display: grid;
@@ -228,6 +234,8 @@ figcaption {
     font-size: var(--fs-small);
     margin-top: var(--space-sm);
 }
+
+/*STYLING FOR CONTACT PAGE*/
 
 /*Contact container styling*/
 .contact-container {
@@ -335,6 +343,14 @@ label {
     font-size: var(--fs-h3);
     margin-top: 5px;
     text-align: center;
+}
+/* SYLING FOR PROJECT GALLERY PAGE */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
+    justify-content: center;
 }
 
 .projectCard { /* Project card styling */

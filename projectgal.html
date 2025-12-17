@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 Website</title>
+    <meta name= "description" content="Lab1 in course DA558A">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Nathalie <br> Törnkvist</div>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li> 
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projectgal.html" class="active">Project-Gallery</a></li> <!-- The active page -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="filter-buttons"> <!-- Container for filter buttons -->
+        <button class="filter-btn active" data-category="all">Show All</button>
+        <button class="filter-btn" data-category="Web Development">Web Development</button>
+        <button class="filter-btn" data-category="Dog Training">Dog Training</button>
+        <button class="filter-btn" data-category="Web Design">Web Design</button>
+    </div>
+
+    <p id="project-count" class="project-count"></p> <!-- Paragraph to show number of displayed projects -->
+
+    <div id="project-container" class="project-container"></div>
+
+    <footer> <!-- Footer section containing copyright and social links -->
+    <p class="small-text">
+        Kristianstad University | Javascript for web development - DA558A | Nathalie Törnkvist | © 2025
+        </p>
+        <a href = 'https://www.instagram.com/houndsnrexes/' target="_blank"> <!-- Opens Instagram profile in a new tab -->
+            <img src="instagram.png" alt="Instagram icon" class="foot-img">
+        </a>
+        <a href = 'https://www.facebook.com/nathalie.tornkvist.5' target="_blank"> <!-- Opens Facebook profile in a new tab -->
+            <img src="facebook.png" alt="Facebook icon" class="foot-img">
+        </a>
+    </footer>
+    <script src="projects.js"></script>
+</body>
+</html>
