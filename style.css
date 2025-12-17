@@ -407,6 +407,7 @@ label {
 }
 
 .project-card { /* Project card styling */
+    min-height: 400px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s forwards;    /* fade-in and slide-up animation */
