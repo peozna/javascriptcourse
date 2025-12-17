@@ -406,18 +406,18 @@ label {
     margin-bottom: var(--space-md);
 }
 
-.projectCard { /* Project card styling */
+.project-card { /* Project card styling */
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s forwards;    /* fade-in and slide-up animation */
 }
 
-.projectCard.visible { /* Class to trigger visibility */
+.project-card.visible { /* Class to trigger visibility */
     opacity: 1;
     transform: translateY(0);
 }
 
-.projectCard:hover {
+.project-card:hover {
     box-shadow:  var(--bs-color) 0px 0px 15px; /* stronger shadow */
     transform: scale(1.05); /* slight enlarge on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
