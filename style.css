@@ -395,6 +395,7 @@ label {
 }
 .filter-btn.active {
     background-color: var(--accent-color);
+    font-weight: bold;
 }
 
 .project-count {
