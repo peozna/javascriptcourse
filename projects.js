@@ -79,3 +79,23 @@ function displayProjects(projectsList ) {
     });
     projectCounter.textContent = `Projects Found: ${projectsList.length}`; // Update project count
 }
+// Initial display of all projects
+displayProjects(projects);
+
+// Filter projects based on category
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        //Active button styling
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const category = button.getAttribute('data-category'); // Get selected category
+
+        if (category === 'all') {
+            displayProjects(projects); // Display all projects
+        } else {
+            const filteredProjects = projects.filter(project => project.category === category); // Filter projects by category
+            displayProjects(filteredProjects); // Display filtered projects
+        }
+    });
+});
