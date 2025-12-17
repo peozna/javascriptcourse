@@ -29,9 +29,9 @@ const projects = [
      {
         id: 4,
         title: "Project dog Milla",
-        description: "Created a training program for Milla the scraed dog",
+        description: "Created a training program for Milla the scared dog",
         category: "Dog Training",
-        technologies: ["Google Docs",],
+        technologies: ["Google Docs", "Email"],
         image: "image/project4.png",
         link: "https://example.com"
     },
@@ -53,6 +53,29 @@ const projects = [
         image: "image/project6.png",
         link: "https://example.com"
     }
-
-
 ];
+
+// DOM Elements
+const projectContainer = document.getElementById('project-container');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCounter = document.getElementById('project-count');
+
+function displayProjects(projectsList ) {
+    projectContainer.innerHTML = ''; // Clear existing projects
+
+    projectsList.forEach(project => { // Loop through each project
+        const projectCard = document.createElement('div'); // Create project card element
+        projectCard.classList.add('project-card'); 
+
+        // Set project card content
+        projectCard.innerHTML = `
+            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <span class="project-category">${project.category}</span>
+            <a href="${project.link}" class="project-link" target="_blank">View Project</a>
+        `;
+        projectContainer.appendChild(projectCard); // Add project card to container
+    });
+    projectCounter.textContent = `Projects Found: ${projectsList.length}`; // Update project count
+}
