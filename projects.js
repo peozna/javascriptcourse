@@ -76,6 +76,10 @@ function displayProjects(projectsList ) {
             <a href="${project.link}" class="project-link" target="_blank">View Project</a>
         `;
         projectContainer.appendChild(projectCard); // Add project card to container
+
+        setTimeout(() => {
+            projectCard.classList.add('visible'); // Trigger fade-in effect
+        }, 100);
     });
     projectCounter.textContent = `Projects Found: ${projectsList.length}`; // Update project count
 }
