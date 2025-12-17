@@ -353,6 +353,42 @@ label {
     justify-content: center;
 }
 
+.filter-buttons { /* Container for filter buttons */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+    align-items: center;
+    margin-bottom: var(--space-md);
+}
+
+/* Filter button styling */
+.filter-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-family: var(--font-text);
+    font-size: var(--fs-normal);
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.filter-btn:hover {
+    background-color: var(--accent-color);
+}
+.filter-btn.active {
+    background-color: var(--accent-color);
+}
+
+.project-count {
+    text-align: center;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--fs-normal);
+    margin-bottom: var(--space-md);
+}
+
 .projectCard { /* Project card styling */
     opacity: 0;
     transform: translateY(20px);
