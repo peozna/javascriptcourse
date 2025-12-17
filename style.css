@@ -353,6 +353,21 @@ label {
     justify-content: center;
 }
 
+.project-card { /* Individual project card styling */
+    background-color: var(--secondary-color);
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 250px; /* flexible width */
+    align-items: center;;
+}
+.project-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0; /* rounded top corners */
+}
+
 .filter-buttons { /* Container for filter buttons */
     display: flex;
     flex-wrap: wrap;
