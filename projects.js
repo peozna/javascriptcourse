@@ -5,7 +5,7 @@ const projects = [
         description: "A personal portfolio website built with HTML, CSS, and JavaScript.",
         category: "Web Development",
         technologies: ["HTML", "CSS", "JavaScript"],
-        image: "image/project1.png",
+        image: "project1.png",
         link: "https://example.com"
     },
     {
@@ -14,7 +14,7 @@ const projects = [
         description: "Built a mobile application for new dog owners using Flutter framework",
         category: "Web Development",
         technologies: ["Flutter", "Dart"],
-        image: "image/project2.png",
+        image: "project2.png",
         link: "https://example.com"
     },
     {
@@ -23,7 +23,7 @@ const projects = [
         description: "Built a simple round-robin dance pairing program using Python.",
         category: "Web Development",
         technologies: ["Python", "PyCharm"],
-        image: "image/project3.png",
+        image: "project3.png",
         link: "https://example.com"
     },
      {
@@ -32,7 +32,7 @@ const projects = [
         description: "Created a training program for Milla the scared dog",
         category: "Dog Training",
         technologies: ["Google Docs", "Email"],
-        image: "image/project4.png",
+        image: "project4.png",
         link: "https://example.com"
     },
      {
@@ -41,7 +41,7 @@ const projects = [
         description: "Created as part of a team a interactive prototype for a coffee shop app using Figma.",
         category: "Web Design",
         technologies: ["Figma"],
-        image: "image/project5.png",
+        image: "project5.png",
         link: "https://example.com"
     },
      {
@@ -50,7 +50,7 @@ const projects = [
         description: "Created as part of a team wireframes for a game called Common Ground for a dating app.",
         category: "Web Design",
         technologies: ["Figma"],
-        image: "image/project6.png",
+        image: "project6.png",
         link: "https://example.com"
     }
 ];

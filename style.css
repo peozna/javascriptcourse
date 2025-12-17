@@ -358,14 +358,15 @@ label {
     width: 100%;
     max-width: 300px;
     flex: 1 1 250px; /* flexible width */
-    align-items: center;;
+    text-align: center;
 }
 .project-card img {
-    width: 100%;
+    width: 80%;
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 12px 12px 0 0; /* rounded top corners */
+    display: block;
+    margin: var(--space-md) auto 0 auto; /* center image */
 }
 
 .filter-buttons { /* Container for filter buttons */
