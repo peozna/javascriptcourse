@@ -1,0 +1,109 @@
+/*STYLING FOR CONTACT PAGE*/
+
+/*Contact container styling*/
+.contact-container {
+    display: flex; /* use flexbox for layout */
+    flex-direction: column; /* stack items vertically */
+    width: 50%;
+    margin: 0 auto; /* centers the container */
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background-color: rgba(109, 67, 141, 0.5);
+    box-shadow:  var(--bs-color) 0px 0px 7px;
+}
+
+/*Contact form styling*/
+form {
+    display: flex; /* use flexbox for layout */
+    flex-direction: column; /* stack items vertically */
+    width: 100%;
+    gap: var(--space-md);
+}
+
+/*Styling for short and long form fields*/
+.form-short, .form-long {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center; /* center label+input as a group */
+    gap: var(--space-sm);
+    width: 100%;
+}
+/*Short and long input field widths*/
+.form-short input {
+    width: 30%; /* short input fields width */
+    border: 3px solid #ccc;
+    border-radius: 4px;
+
+}
+.form-long input, textarea {
+    width: 70%; /* long input fields width */ 
+    border: 3px solid #ccc;
+    border-radius: 4px;    
+}
+input:focus, textarea:focus, select:focus { /* blue border on focus */
+     border-color: #007bff
+} 
+.input-error { /* red border on error */
+    border-color: red !important;
+}
+.input-valid { /* green border on valid input */
+    border-color: green !important;
+}
+
+/*Form label styling*/
+label {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--fs-normal);
+}
+
+.button-row, .button-clear {
+    display: flex;
+    justify-content: flex-end; /* align button to the right */
+}
+.button-row button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--fs-small);
+    width: 15%;
+    border: white 2px solid; /* white border */
+    border-radius: 50px; /* rounded corners */
+}
+.button-clear button{
+    background-color: var(--heading-color);
+    color: var(--accent-color);
+    font-family: var(--fs-small);
+    width: 15%;
+    border: var(--accent-color) 2px solid; /* purple border */
+    border-radius: 50px; /* rounded corners */
+}
+.button-row button:hover {
+    background-color: var(--accent-color);
+    cursor: pointer; /* pointer cursor on hover */
+}
+.button-clear button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    cursor: pointer; /* pointer cursor on hover */
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 1px;
+    text-align: right;
+    transition: opacity 0.3s ease; 
+}
+.messageCounter {
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--fs-small);
+    text-align: right;
+}
+.successMessage {
+    color: var(--st-color);
+    font-size: var(--fs-h3);
+    margin-top: 5px;
+    text-align: center;
+}
