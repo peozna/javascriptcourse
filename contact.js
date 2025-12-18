@@ -41,8 +41,9 @@ function clearForm() { // Function to clear the form
 
     //Reset message counter
     const messageCounter = document.getElementById('messageCounter');
-    messageCounter.textContent = '0 / 20 characters';
-    messageCounter.style.color = 'red';
+    messageCounter.textContent = '0 / 20 characters'; // Reset counter text
+    messageCounter.style.color = ''; // Reset counter color
+
 }   
 
 function successMessage() {
