@@ -77,11 +77,21 @@ body {
 
 /* Header container: logo and navigation menu */
 .header{
+    position: relative; 
     display: flex; /* use flexbox for horizontal layout */
     align-items: center; /*vertically centers items*/
     justify-content: space-between; /* pushes logo to left, meny to right */
     padding: var(--space-md);
     background-color: var(--primary-color);
+}
+
+.theme-switcher {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--space-sm);
 }
 
 /*STYLING FOR NAVIGATION MENU AND INDEX PAGE*/
@@ -241,7 +251,8 @@ footer {
     text-align: center;
 }
 .foot-img {
-    width: 2%;
+    width: auto;
+    max-width: 30px;
     height: auto;
 }
 
@@ -290,6 +301,11 @@ button { width: 30%; }
         flex-direction: column; /* stack logo and menu vertically */
         text-align: center; /* center align text */
         
+    }
+    .theme-switcher {
+        position: static;
+        transform: none;
+        margin-top: var(--space-sm);
     }
     ul.navlinks {
         flex-direction: column; /* stack menu items vertically */
@@ -347,10 +363,6 @@ button { width: 30%; }
 
     .gallery-grid img { 
         aspect-ratio: auto; 
-    }
-
-    .contact-container {
-        width: 80%; /* increase contact container width */
     }
     button {
         width: 30%; /* increase button width */
