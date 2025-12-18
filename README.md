@@ -21,6 +21,7 @@ No external libraries were used, only pure JavaScript
 ## Installation and setup
 To run this project locally:
 
-**Clone the repository**  
-   ```bash
-   git clone https://github.com/peozna/javascriptcourse.git
+Open the project folder in your editor (e.g., VS Code).
+Open index.html in your browser to view the site.
+
+There are no build steps or dependencies — just HTML, CSS, and JavaScript.
