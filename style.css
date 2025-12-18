@@ -1,7 +1,7 @@
 /*Importing the fonts I want*/
 @import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500&display=swap');
 
-/*CSS variable system. Defines all colour, font families and sizes for easy reuse and consistancy*/
+/*Main CSS variables (purple theme)*/
 :root {
     /*Colours*/
     --primary-color: #4B2668; /* deep purple */
@@ -30,6 +30,30 @@
     --space-sm: 10px;
     --space-md: 20px;
     --space-lg: 40px;
+}
+
+/*Theme: Dark*/
+body.dark-theme {
+    --primary-color: #1E1E1E; /* dark grey */
+    --secondary-color: #2C2C2C; /* medium grey */
+    --accent-color: #3A3A3A; /* light grey */
+    --heading-color: #FFFFFF; /* white */
+    --text-color: #CCCCCC; /* light grey */
+    --bs-color: #000000; /* box shadow color */
+    --ts-color: #444444; /* text shadow color */
+    --st-color: #FFAA00; /* highlight color */
+}
+
+/*Theme: Light*/
+body.light-theme {
+    --primary-color: #FFFFFF; /* white */
+    --secondary-color: #F0F0F0; /* light grey */
+    --accent-color: #E0E0E0; /* medium grey */
+    --heading-color: #000000; /* black */
+    --text-color: #333333; /* dark grey */
+    --bs-color: #AAAAAA; /* box shadow color */
+    --ts-color: #777777; /* text shadow color */
+    --st-color: #0077CC; /* highlight color */
 }
 
 /*Heading and text styling*/
