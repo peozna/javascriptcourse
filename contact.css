@@ -59,31 +59,35 @@ label {
     font-size: var(--fs-normal);
 }
 
-.button-row, .button-clear {
+.button-group{
     display: flex;
     justify-content: flex-end; /* align button to the right */
 }
-.button-row button {
+.button-group button[type="submit"] {
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: var(--fs-small);
-    width: 15%;
+    width: auto;
+    min-width: 120px;
+    padding: var(--space-sm) var(--space-md);
     border: white 2px solid; /* white border */
     border-radius: 50px; /* rounded corners */
 }
-.button-clear button{
+.button-group button[type="reset"] {
     background-color: var(--heading-color);
     color: var(--accent-color);
     font-family: var(--fs-small);
-    width: 15%;
+    width: auto;
+    min-width: 120px;
+    padding: var(--space-sm) var(--space-md);
     border: var(--accent-color) 2px solid; /* purple border */
     border-radius: 50px; /* rounded corners */
 }
-.button-row button:hover {
+.button-group button[type="submit"]:hover {
     background-color: var(--accent-color);
     cursor: pointer; /* pointer cursor on hover */
 }
-.button-clear button:hover {
+.button-group button[type="reset"]:hover {
     background-color: var(--primary-color);
     color: var(--text-color);
     cursor: pointer; /* pointer cursor on hover */
@@ -106,4 +110,22 @@ label {
     font-size: var(--fs-h3);
     margin-top: 5px;
     text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .contact-container {
+        width: 90%; /* full width on small screens */
+        padding: var(--space-md);
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group button {
+        width: 100%;
+        max-width: 300px;
+    }
 }
