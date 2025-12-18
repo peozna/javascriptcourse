@@ -5,4 +5,22 @@ This website showcases who I am, by interests, skills and experience and is buil
 
 Live site: https://peozna.github.io/javascriptcourse/
 
-## Table of contents
+## Project Description
+This project is a personal portfolio website about me and showcases my skills, experience, interests and studies. The website consist of mulitple pages, Home, Portfolio, Gallery, Project-Gallery and Contact. 
+My most interactive work on the website is with the the Project-Gallery and Contact page, wich are dynamically built with JavaScript. 
+
+## Technologies Used
+This project uses:
+
+**HTML5** Page structure and layout
+**CSS3** Styling, animations and responsiveness
+**JavaScript** DOM manipulation, Data handling and events
+
+No external libraries were used, only pure JavaScript
+
+## Installation and setup
+To run this project locally:
+
+**Clone the repository**  
+   ```bash
+   git clone https://github.com/peozna/javascriptcourse.git
