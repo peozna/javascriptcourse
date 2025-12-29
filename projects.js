@@ -60,6 +60,7 @@ const projectContainer = document.getElementById('project-container');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCounter = document.getElementById('project-count');
 
+// Function to display projects
 function displayProjects(projectsList ) {
     projectContainer.innerHTML = ''; // Clear existing projects
 

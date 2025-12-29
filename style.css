@@ -123,12 +123,12 @@ body {
 /*STYLING FOR NAVIGATION MENU AND INDEX PAGE*/
 
 /* Logo styling */
-div.logo {
+a.logo {
     font-family: var(--font-heading);
     color: var(--heading-color);
     font-size: 50px;
     padding-left: var(--space-lg);
-
+    text-decoration: none;
 }
 
 /* Navigation menu styling */

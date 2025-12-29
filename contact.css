@@ -58,7 +58,6 @@ label {
     color: var(--text-color);
     font-size: var(--fs-normal);
 }
-
 .button-group{
     display: flex;
     justify-content: flex-end; /* align button to the right */

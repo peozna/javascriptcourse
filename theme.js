@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => { 
 
 const themeButtons = document.querySelectorAll('.theme-btn');
 
@@ -10,7 +9,6 @@ themeButtons.forEach(button => {
     });
 });
     loadTheme();
-});
 
 // Function to switch themes
 function switchTheme(theme) {
