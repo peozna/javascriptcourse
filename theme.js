@@ -10,6 +10,7 @@ themeButtons.forEach(button => {
 
 // Function to switch themes
 function switchTheme(theme) {
+    document.documentElement.removeAttribute('data-theme'); // Remove existing data-theme attribute
     document.documentElement.setAttribute('data-theme', theme); // Set data-theme attribute on root element
     document.body.className = theme + '-theme'; // Update body class to match theme
 }
