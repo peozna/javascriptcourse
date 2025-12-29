@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => { 
+
 const themeButtons = document.querySelectorAll('.theme-btn');
 
 //Event listeners for theme buttons
@@ -7,17 +9,16 @@ themeButtons.forEach(button => {
         switchTheme(selectedTheme); // Call function to switch theme
     });
 });
+    loadTheme();
+});
 
 // Function to switch themes
 function switchTheme(theme) {
     // Remove existing theme classes
-    document.body.className = '';
+    document.body.classList.remove('light-theme', 'dark-theme', 'purple-theme');
 
-    //Apply new theme if it's not purple (default)
-    if (theme !== 'purple') {
-        document.body.classList.add(theme + '-theme'); // Add selected theme class to body
-    }
-
+    document.body.classList.add(theme + '-theme'); // Add selected theme class to body
+   
     saveTheme(theme); // Save selected theme in cookie
 }
 
@@ -30,14 +31,12 @@ function saveTheme(theme) {
 function loadTheme() {
     const cookies = document.cookie.split('; ');
     
-    for (let i=0; i < cookies.length; i++) {
-        if (cookies[i].startsWith('selectedTheme=')) {
-            const theme = cookies[i].substring('selectedTheme='.length);
-            switchTheme(theme);
+    for (let cookie of cookies) {
+        const [name, value] = cookie.split('=');
+
+        if (name === 'selectedTheme') {
+            switchTheme(value);
             return;
         }
     }
 }
-
-// Call loadTheme on initial page load
-loadTheme();

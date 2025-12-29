@@ -3,15 +3,6 @@
 
 /*Main CSS variables (purple theme)*/
 :root {
-    /*Colours*/
-    --primary-color: #4B2668; /* deep purple */
-    --secondary-color: #6D438D; /* lighter purple */
-    --accent-color: #1B042D; /* dark purple */
-    --heading-color: #E1DDE3; /* light grey */
-    --text-color: #FFFFFF; /* white */
-    --bs-color: #371c4c; /* box shadow color */
-    --ts-color: #7B539A; /* text shadow color */
-    --st-color: #D7BA89; /* highlight color */
 
     /*Font Families*/
     --font-heading: 'Italiana', serif;
@@ -30,6 +21,16 @@
     --space-sm: 10px;
     --space-md: 20px;
     --space-lg: 40px;
+}
+body.purple-theme {
+    --primary-color: #4B2668; /* deep purple */
+    --secondary-color: #6D438D; /* lighter purple */
+    --accent-color: #1B042D; /* dark purple */
+    --heading-color: #E1DDE3; /* light grey */
+    --text-color: #FFFFFF; /* white */
+    --bs-color: #371c4c; /* box shadow color */
+    --ts-color: #7B539A; /* text shadow color */
+    --st-color: #D7BA89; /* highlight color */
 }
 
 /*Theme: Dark*/
