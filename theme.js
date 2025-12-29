@@ -21,7 +21,23 @@ function switchTheme(theme) {
     saveTheme(theme); // Save selected theme in cookie
 }
 
+// Function to save theme in cookie
 function saveTheme(theme) {
     document.cookie = "selectedTheme="+ theme + "; path=/; max-age=" + 60*60*24*30; // Save theme in cookie for 30 days
 }
 
+//Function to load theme from cookie
+function loadTheme() {
+    const cookies = document.cookie.split('; ');
+    
+    for (let i=0; i < cookies.length; i++) {
+        if (cookies[i].startsWith('selectedTheme=')) {
+            const theme = cookies[i].substring('selectedTheme='.length);
+            switchTheme(theme);
+            return;
+        }
+    }
+}
+
+// Call loadTheme on initial page load
+loadTheme();
