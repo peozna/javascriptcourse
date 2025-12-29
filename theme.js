@@ -14,3 +14,7 @@ function switchTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme); // Set data-theme attribute on root element
     document.body.className = theme + '-theme'; // Update body class to match theme
 }
+
+function saveTheme(theme) {
+    document.cookie = "selectedTheme" + theme + "; path=/; max-age=" + 60*60*24*30; // Save theme in cookie for 30 days
+}
