@@ -65,6 +65,7 @@
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.5s forwards;    /* fade-in and slide-up animation */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card.visible { /* Class to trigger visibility */
@@ -76,4 +77,12 @@
     box-shadow:  var(--bs-color) 0px 0px 15px; /* stronger shadow */
     transform: scale(1.05); /* slight enlarge on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media only screen and (max-width: 600px) {
+    .filter-btn{
+        flex: 1 1 100%; /* full width buttons on small screens */
+        height: auto;
+        font-size: var(--fs-small);
+    }
 }
