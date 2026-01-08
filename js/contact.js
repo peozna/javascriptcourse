@@ -1,6 +1,8 @@
-
+// Get form and input elements
 const contactForm = document.getElementById('contactForm');
 const nameInput = document.getElementById('name');
+const lastNameInput = document.getElementById('lastName');
+const phoneInput = document.getElementById('phone');
 const emailInput = document.getElementById('email');
 const subject = document.getElementById('subject');
 const messageInput = document.getElementById('message');
@@ -25,6 +27,8 @@ function clearForm() { // Function to clear the form
 
     //Clear input fields
     nameInput.value = '';
+    lastNameInput.value = '';
+    phoneInput.value = '';
     emailInput.value = '';
     subject.value = '';
     messageInput.value = '';
@@ -75,6 +79,40 @@ function validateName() { // Validate name input
         return true;
     }
 }
+// Function to validate Last name input
+function validateLastName() { // Validate last name input
+    const lastName = lastNameInput.value.trim();
+    if (lastName === '') { // Check if last name is empty
+        showError(lastNameInput, 'Please enter your last name.');
+        return false;
+    }
+    else if (!/^[a-zA-Z\s]+$/.test(lastName)) { // Check if last name contains only letters and spaces
+        showError(lastNameInput, 'Last name can only contain letters and spaces.');
+        return false;
+    }
+    else { // Last name is valid
+        clearError(lastNameInput); // Clear any previous error
+        return true;
+    }
+}
+
+//Function to validate phone number
+function validatePhone() { // Validate phone number input
+    const phone = phoneInput.value.trim();
+    const phonePattern = /^\+?[0-9\s\-()]{7,15}$/; // Basic phone number pattern
+    if (phone == '') { // If phone number is empty, it's valid (optional field)
+        clearError(phoneInput); // Clear any previous error
+        return true;
+    }
+    else if (!phonePattern.test(phone)) { // Check if phone number matches pattern
+        showError(phoneInput, 'Please enter a valid phone number.');
+        return false;
+    }
+    else {
+        clearError(phoneInput); // Clear any previous error
+        return true;
+    }
+};
 
 //Function to validate email
 function validateEmail() { // Validate email input
@@ -135,16 +173,20 @@ messageInput.addEventListener('input', function() { // Message input event liste
 
 // Event listeners for form validation
 nameInput.addEventListener('blur', validateName);
+lastNameInput.addEventListener('blur', validateLastName);
+phoneInput.addEventListener('blur', validatePhone);
 emailInput.addEventListener('blur', validateEmail);
 subject.addEventListener('change', validateSubject);
-messageInput.addEventListener('blur', validateMessage);
+messageInput.addEventListener('input', validateMessage);
 
 contactForm.addEventListener('submit', function(event) { // Form submission event listener
     const isNameValid = validateName();
+    const isLastNameValid = validateLastName();
+    const isPhoneValid = validatePhone();
     const isEmailValid = validateEmail();
     const isSubjectValid = validateSubject();
     const isMessageValid = validateMessage();
-    if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) { // If any validation fails
+    if (!isNameValid || !isLastNameValid || !isPhoneValid || !isEmailValid || !isSubjectValid || !isMessageValid) { // If any validation fails
         event.preventDefault(); // Prevent form submission
     }
     else {

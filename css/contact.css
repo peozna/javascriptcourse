@@ -111,6 +111,11 @@ label {
     text-align: center;
 }
 
+#message {
+    height: 100px; /* fixed height for message textarea */
+    resize: vertical; /* allow vertical resizing */
+}
+
 @media (max-width: 600px) {
 
     .contact-container {
